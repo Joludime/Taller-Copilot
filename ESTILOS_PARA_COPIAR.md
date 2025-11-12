@@ -237,8 +237,8 @@ Abre el archivo `styles.css` en GitHub, ve al final (después de la última llav
     }
 
     .profile-img {
-        width: clamp(150px, 40vw, 200px);
-        height: clamp(150px, 40vw, 200px);
+        width: clamp(150px, 20vw, 200px);
+        height: clamp(150px, 20vw, 200px);
     }
 
     .stats-grid {
