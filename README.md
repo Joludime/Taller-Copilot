@@ -4,7 +4,7 @@ Un portafolio web moderno, profesional y totalmente personalizado para mostrar m
 
 ## 🌐 Ver en Vivo
 
-**🔗 [Ver Portafolio](https://joludime.github.io/Taller-Copilot/)**
+**🔗 [Ver Portafolio](https://joludime.github.io/Jose-Luis-Diaz-Portafolio/)**
 
 ## 👨‍💻 Sobre Este Proyecto
 
@@ -24,22 +24,35 @@ Este es mi portafolio profesional actualizado, diseñado con las últimas tecnol
 - **Rol:** Desarrollador Web Full Stack
 - **Email:** joludime291076@gmail.com
 - **GitHub:** [@Joludime](https://github.com/Joludime)
+- **LinkedIn:** [Jose Luis Diaz Morujo](https://www.linkedin.com/in/jose-luis-diaz-morujo)
 
 ## 🎯 Secciones
 
 ### 1. 🏠 Hero / Inicio
-Presentación impactante con CTA para contacto directo.
+Presentación impactante con foto de perfil y CTA para contacto directo.
 
-### 2. 👤 Sobre Mí
+### 2. 📊 Estadísticas
+Métricas destacadas sobre proyectos, experiencia y certificaciones.
+
+### 3. 👤 Sobre Mí
 Descripción profesional de mi trayectoria, experiencia y enfoque en el desarrollo web.
 
-### 3. 🛠️ Habilidades
+### 4. 🛠️ Habilidades
 Organizadas en tres categorías:
 - **Frontend:** HTML5, CSS3, JavaScript ES6+, React, Vue.js, Responsive Design
 - **Backend:** Node.js, Express, APIs RESTful, Python, PHP, SQL
 - **Herramientas:** Git/GitHub, VS Code, Figma, Postman, Firebase, Netlify/Vercel
 
-### 4. 🚀 Proyectos Destacados
+### 5. 🎓 Certificaciones
+Nueve certificaciones profesionales incluyendo:
+- Analista de Datos (EBAC)
+- Python, Excel Avanzado
+- Ciberseguridad (CISCO)
+- IA y Productividad (Google)
+- AWS Fundamentals
+- Y más...
+
+### 6. 🚀 Proyectos Destacados
 
 #### Casa Lool Beh - Sistema de Reservas (2024)
 Sistema completo de reservas para casa de hospedaje con gestión de disponibilidad y seguimiento en tiempo real.
@@ -55,7 +68,7 @@ Aplicación profesional para gestión integral de reservas hoteleras con interfa
 Herramienta de análisis con gráficos interactivos y dashboard dinámico para toma de decisiones.
 - 💻 [GitHub](https://github.com/Joludime/ANALISIS_RESERVAS)
 
-### 5. 📧 Contacto
+### 7. 📧 Contacto
 Formulario de contacto y enlaces directos a redes sociales profesionales.
 
 ## 🎨 Características Técnicas
@@ -65,6 +78,7 @@ Formulario de contacto y enlaces directos a redes sociales profesionales.
 - Tipografía moderna y legible
 - Espaciado consistente y visual hierarchy
 - Microinteracciones y feedback visual
+- Foto de perfil circular con animación
 
 ### Funcionalidad
 - Navegación sticky con scroll suave
@@ -73,6 +87,7 @@ Formulario de contacto y enlaces directos a redes sociales profesionales.
 - Sistema de notificaciones
 - LocalStorage para preferencias
 - Efectos de parallax
+- Tarjetas interactivas con hover effects
 
 ### Optimización
 - Código modular y reutilizable
@@ -90,6 +105,8 @@ Formulario de contacto y enlaces directos a redes sociales profesionales.
 ├── datos-portafolio.json   # Datos personales estructurados
 ├── README.md               # Documentación del proyecto
 ├── DATOS_PERSONALIZACION.md # Guía de personalización
+├── images/                 # 📁 Carpeta de imágenes
+│   └── perfil.jpg         # Foto de perfil
 └── js/                     # 📁 Carpeta de JavaScript
     ├── app.js              # Configuración e inicialización
     ├── main.js             # Script principal
@@ -112,15 +129,15 @@ Formulario de contacto y enlaces directos a redes sociales profesionales.
 
 - 📦 15+ Proyectos completados
 - 💼 3+ Años de experiencia
-- 🛠️ 10+ Tecnologías dominadas
+- 🛠️ 10+ Certificaciones
 - 💯 100% Dedicación
 
 ## 🔗 Enlaces Importantes
 
-- 🌐 [Portafolio en Vivo](https://joludime.github.io/Taller-Copilot/)
+- 🌐 [Portafolio en Vivo](https://joludime.github.io/Jose-Luis-Diaz-Portafolio/)
 - 💻 [Perfil GitHub](https://github.com/Joludime)
 - 📧 [Email](mailto:joludime291076@gmail.com)
-- 🔗 [LinkedIn](https://linkedin.com/in/jose-luis-diaz)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/jose-luis-diaz-morujo)
 
 ## 📝 Documentación Adicional
 
@@ -140,6 +157,8 @@ Este portafolio representa una evolución significativa respecto a versiones ant
 ✅ **Mejor UX/UI** - Animaciones y feedback visual
 ✅ **SEO optimizado** - Meta tags y estructura semántica
 ✅ **Documentación completa** - Fácil de mantener y actualizar
+✅ **Foto de perfil integrada** - Presentación visual mejorada
+✅ **Sección de certificaciones** - Muestra credenciales profesionales
 
 ## 🔄 Próximas Mejoras
 
@@ -150,6 +169,7 @@ Este portafolio representa una evolución significativa respecto a versiones ant
 - [ ] Implementar i18n (inglés/español)
 - [ ] Agregar animaciones más complejas
 - [ ] PWA (Progressive Web App)
+- [ ] Optimizar imagen de perfil
 
 ## 📄 Licencia
 
@@ -161,7 +181,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detal
 
 - 📧 Email: joludime291076@gmail.com
 - 💻 GitHub: [@Joludime](https://github.com/Joludime)
-- 🔗 LinkedIn: [Jose Luis Diaz](https://linkedin.com/in/jose-luis-diaz)
+- 🔗 LinkedIn: [Jose Luis Diaz Morujo](https://www.linkedin.com/in/jose-luis-diaz-morujo)
 
 ---
 
