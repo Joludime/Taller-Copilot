@@ -1,8 +1,9 @@
 /**
- * 📋 MÓDULO FORMULARIO
- * ====================
+ * 📋 MÓDULO FORMULARIO CON EMAILJS
+ * =================================
  * 
- * Maneja toda la funcionalidad del formulario de contacto.
+ * Maneja toda la funcionalidad del formulario de contacto
+ * con integración de EmailJS para envío real de emails.
  */
 
 import { $, $$, establecerTexto, agregarClase, quitarClase } from '../utils/dom.js';
@@ -11,27 +12,64 @@ import { sanitizar, log } from '../utils/helpers.js';
 
 class Formulario {
   constructor() {
-    this.formulario = $('#formulario-contacto');
-    this.inputEmail = $('#email');
-    this.inputAsunto = $('#asunto');
-    this.inputMensaje = $('#mensaje');
-    this.btnEnviar = $('.cta-button');
+    this.formulario = $('#formulario-contacto') || document.querySelector('.contact-form');
+    this.inputNombre = $('#nombre') || document.querySelector('input[type="text"]');
+    this.inputEmail = $('#email') || document.querySelector('input[type="email"]');
+    this.inputAsunto = $('#asunto') || document.querySelectorAll('input[type="text"]')[1];
+    this.inputMensaje = $('#mensaje') || document.querySelector('textarea');
+    this.btnEnviar = document.querySelector('.submit-button');
     this.errores = {};
+    
+    // Configuración de EmailJS (el usuario debe reemplazar estos valores)
+    this.emailjsConfig = {
+      serviceID: 'TU_SERVICE_ID',     // Cambiar por tu Service ID
+      templateID: 'TU_TEMPLATE_ID',   // Cambiar por tu Template ID
+      publicKey: 'TU_PUBLIC_KEY'      // Cambiar por tu Public Key
+    };
     
     if (this.formulario) {
       this.init();
+    } else {
+      console.warn('⚠️ Formulario de contacto no encontrado');
     }
   }
 
   init() {
+    // Inicializar EmailJS
+    this.inicializarEmailJS();
+    
+    // Agregar eventos
     this.agregarEventosValidacion();
     this.manejarEnvio();
+    
+    log('📋 Formulario de contacto inicializado', 'info');
+  }
+
+  /**
+   * Inicializa EmailJS con la clave pública
+   */
+  inicializarEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+      try {
+        emailjs.init(this.emailjsConfig.publicKey);
+        log('✉️ EmailJS inicializado correctamente', 'success');
+      } catch (error) {
+        log('❌ Error al inicializar EmailJS: ' + error.message, 'error');
+      }
+    } else {
+      log('⚠️ EmailJS no está cargado. Verifica que el script esté en el HTML', 'warning');
+    }
   }
 
   /**
    * Agrega eventos de validación en tiempo real
    */
   agregarEventosValidacion() {
+    if (this.inputNombre) {
+      this.inputNombre.addEventListener('blur', () => this.validarNombre());
+      this.inputNombre.addEventListener('input', () => this.limpiarError('nombre'));
+    }
+
     if (this.inputEmail) {
       this.inputEmail.addEventListener('blur', () => this.validarEmail());
       this.inputEmail.addEventListener('input', () => this.limpiarError('email'));
@@ -46,6 +84,27 @@ class Formulario {
       this.inputMensaje.addEventListener('blur', () => this.validarMensaje());
       this.inputMensaje.addEventListener('input', () => this.limpiarError('mensaje'));
     }
+  }
+
+  /**
+   * Valida el nombre
+   * @returns {boolean}
+   */
+  validarNombre() {
+    const nombre = this.inputNombre?.value || '';
+    
+    if (!noEstaVacio(nombre)) {
+      this.mostrarError('nombre', 'El nombre es requerido');
+      return false;
+    }
+    
+    if (!tieneMinimo(nombre, 2)) {
+      this.mostrarError('nombre', 'El nombre debe tener al menos 2 caracteres');
+      return false;
+    }
+    
+    this.limpiarError('nombre');
+    return true;
   }
 
   /**
@@ -116,11 +175,12 @@ class Formulario {
    * @returns {boolean}
    */
   validarFormularioCompleto() {
+    const nombreValido = this.validarNombre();
     const emailValido = this.validarEmail();
     const asuntoValido = this.validarAsunto();
     const mensajeValido = this.validarMensaje();
     
-    return emailValido && asuntoValido && mensajeValido;
+    return nombreValido && emailValido && asuntoValido && mensajeValido;
   }
 
   /**
@@ -138,6 +198,10 @@ class Formulario {
       if (!errorElement) {
         errorElement = document.createElement('small');
         errorElement.className = 'error-message';
+        errorElement.style.color = '#ef4444';
+        errorElement.style.fontSize = '0.85rem';
+        errorElement.style.marginTop = '0.25rem';
+        errorElement.style.display = 'block';
         input.parentElement.appendChild(errorElement);
       }
       establecerTexto(errorElement, mensaje);
@@ -167,9 +231,10 @@ class Formulario {
    */
   obtenerDatos() {
     return {
-      email: sanitizar(this.inputEmail?.value || ''),
-      asunto: sanitizar(this.inputAsunto?.value || ''),
-      mensaje: sanitizar(this.inputMensaje?.value || ''),
+      from_name: sanitizar(this.inputNombre?.value || ''),
+      from_email: sanitizar(this.inputEmail?.value || ''),
+      subject: sanitizar(this.inputAsunto?.value || ''),
+      message: sanitizar(this.inputMensaje?.value || ''),
     };
   }
 
@@ -184,6 +249,10 @@ class Formulario {
       const inputs = $$('input, textarea', this.formulario);
       inputs.forEach(input => {
         quitarClase(input, 'error');
+        const errorElement = input.parentElement?.querySelector('.error-message');
+        if (errorElement) {
+          errorElement.remove();
+        }
       });
     }
   }
@@ -197,7 +266,8 @@ class Formulario {
         e.preventDefault();
         
         if (!this.validarFormularioCompleto()) {
-          log('Hay errores en el formulario', 'warning');
+          log('❌ Hay errores en el formulario', 'warning');
+          this.mostrarNotificacion('Por favor, corrige los errores en el formulario', 'error');
           return;
         }
         
@@ -208,10 +278,17 @@ class Formulario {
   }
 
   /**
-   * Envía el formulario
+   * Envía el formulario usando EmailJS
    * @param {Object} datos - Datos del formulario
    */
   async enviarFormulario(datos) {
+    // Verificar si EmailJS está configurado
+    if (this.emailjsConfig.serviceID === 'TU_SERVICE_ID') {
+      log('⚠️ EmailJS no está configurado. Por favor configura tus credenciales.', 'warning');
+      this.mostrarNotificacion('⚠️ El formulario no está configurado. Contacta al administrador.', 'error');
+      return;
+    }
+
     try {
       // Cambiar botón a estado enviando
       if (this.btnEnviar) {
@@ -219,20 +296,28 @@ class Formulario {
         this.btnEnviar.textContent = 'Enviando...';
       }
 
-      // Simular envío (reemplazar con tu API real)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Enviar email usando EmailJS
+      if (typeof emailjs !== 'undefined') {
+        const response = await emailjs.send(
+          this.emailjsConfig.serviceID,
+          this.emailjsConfig.templateID,
+          datos
+        );
 
-      log('Formulario enviado correctamente', 'success');
-      this.mostrarNotificacion('¡Mensaje enviado correctamente! 🎉', 'success');
-      this.reiniciar();
+        log('✅ Email enviado correctamente: ' + response.status, 'success');
+        this.mostrarNotificacion('¡Mensaje enviado correctamente! 🎉 Te responderé pronto.', 'success');
+        this.reiniciar();
+      } else {
+        throw new Error('EmailJS no está disponible');
+      }
 
     } catch (error) {
-      log('Error al enviar formulario', 'error');
-      this.mostrarNotificacion('Error al enviar el mensaje', 'error');
+      log('❌ Error al enviar email: ' + error.text || error.message, 'error');
+      this.mostrarNotificacion('❌ Error al enviar el mensaje. Por favor, intenta de nuevo o contacta por email directo.', 'error');
     } finally {
       if (this.btnEnviar) {
         this.btnEnviar.disabled = false;
-        this.btnEnviar.textContent = 'Enviar Mensaje';
+        this.btnEnviar.textContent = 'Enviar mensaje';
       }
     }
   }
@@ -246,16 +331,39 @@ class Formulario {
     const notificacion = document.createElement('div');
     notificacion.className = `notificacion notificacion-${tipo}`;
     notificacion.textContent = mensaje;
+    
+    // Estilos de la notificación
+    notificacion.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: ${tipo === 'success' ? '#10b981' : '#ef4444'};
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 10000;
+      font-weight: 500;
+      max-width: 400px;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.3s ease;
+    `;
+    
     document.body.appendChild(notificacion);
 
+    // Animar entrada
     setTimeout(() => {
-      notificacion.classList.add('mostrar');
+      notificacion.style.opacity = '1';
+      notificacion.style.transform = 'translateX(0)';
     }, 100);
 
+    // Animar salida y remover
     setTimeout(() => {
-      notificacion.classList.remove('mostrar');
+      notificacion.style.opacity = '0';
+      notificacion.style.transform = 'translateX(100%)';
       setTimeout(() => notificacion.remove(), 300);
-    }, 3000);
+    }, 5000);
   }
 }
 
