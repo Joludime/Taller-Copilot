@@ -3,463 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Luis Diaz - Desarrollador Web Full Stack</title>
-    <meta name="description" content="Portafolio profesional de Jose Luis Diaz, Desarrollador Web Full Stack especializado en soluciones web innovadoras">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Jose Luis Diaz - Desarrollador Web Full Stack | Portafolio Profesional</title>
+    <meta name="description" content="Portafolio profesional de Jose Luis Diaz, Desarrollador Web Full Stack especializado en React, Node.js, Python y soluciones web innovadoras. 15+ proyectos completados.">
+    <meta name="keywords" content="desarrollador web, full stack, JavaScript, React, Node.js, Python, portafolio, desarrollo web, programador, frontend, backend">
+    <meta name="author" content="Jose Luis Diaz">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://joludime.github.io/Jose-Luis-Diaz-Portafolio/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joludime.github.io/Jose-Luis-Diaz-Portafolio/">
+    <meta property="og:title" content="Jose Luis Diaz - Desarrollador Web Full Stack">
+    <meta property="og:description" content="Desarrollador Web Full Stack especializado en crear soluciones digitales innovadoras. 15+ proyectos completados, 10+ certificaciones.">
+    <meta property="og:image" content="https://joludime.github.io/Jose-Luis-Diaz-Portafolio/images/perfil.jpg">
+    <meta property="og:image:alt" content="Jose Luis Diaz - Desarrollador Web Full Stack">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://joludime.github.io/Jose-Luis-Diaz-Portafolio/">
+    <meta name="twitter:title" content="Jose Luis Diaz - Desarrollador Web Full Stack">
+    <meta name="twitter:description" content="Desarrollador Web Full Stack especializado en crear soluciones digitales innovadoras.">
+    <meta name="twitter:image" content="https://joludime.github.io/Jose-Luis-Diaz-Portafolio/images/perfil.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="form-styles.css">
     
+    <!-- Preconnect para EmailJS -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jose Luis Diaz",
+      "jobTitle": "Desarrollador Web Full Stack",
+      "url": "https://joludime.github.io/Jose-Luis-Diaz-Portafolio/",
+      "sameAs": [
+        "https://github.com/Joludime",
+        "https://www.linkedin.com/in/jose-luis-diaz-morujo"
+      ],
+      "knowsAbout": ["JavaScript", "React", "Node.js", "Python", "HTML", "CSS", "Web Development"],
+      "alumniOf": "EBAC - Escuela Británica de Artes Creativas",
+      "email": "joludime291076@gmail.com",
+      "image": "https://joludime.github.io/Jose-Luis-Diaz-Portafolio/images/perfil.jpg"
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
     <!-- NAVEGACIÓN -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
         <div class="container">
-            <div class="logo">Jose Luis Diaz</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#certificaciones">Certificaciones</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <div class="logo" aria-label="Logo">Jose Luis Diaz</div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#inicio" role="menuitem">Inicio</a></li>
+                <li role="none"><a href="#sobre-mi" role="menuitem">Sobre mí</a></li>
+                <li role="none"><a href="#habilidades" role="menuitem">Habilidades</a></li>
+                <li role="none"><a href="#certificaciones" role="menuitem">Certificaciones</a></li>
+                <li role="none"><a href="#proyectos" role="menuitem">Proyectos</a></li>
+                <li role="none"><a href="#contacto" role="menuitem">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- ENCABEZADO/HERO -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>¡Hola! Soy Jose Luis Diaz</h1>
-                    <p class="subtitle">Desarrollador Web Full Stack apasionado por crear soluciones digitales innovadoras y funcionales</p>
-                    <a href="#contacto" class="cta-button">Hablemos</a>
-                </div>
-                <div class="hero-image">
-                    <img src="images/perfil.jpg" alt="Jose Luis Diaz - Desarrollador Web" class="profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ESTADÍSTICAS -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Proyectos Completados</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">3+</div>
-                    <div class="stat-label">Años de Experiencia</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Certificaciones</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Dedicación</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="about">
-        <div class="container">
-            <h2>Sobre mí</h2>
-            <div class="about-content">
-                <p>
-                    Soy un desarrollador web apasionado por crear soluciones innovadoras y funcionales. Me especializo en el desarrollo de aplicaciones web modernas utilizando las últimas tecnologías y mejores prácticas del desarrollo web.
-                </p>
-                <p>
-                    Con experiencia tanto en frontend como backend, me encanta transformar ideas en realidad digital, siempre buscando la mejor experiencia de usuario, código limpio y soluciones escalables que resuelvan problemas reales.
-                </p>
-                <p>
-                    Mi trayectoria incluye múltiples proyectos completados, destacando sistemas de reservas, aplicaciones de gestión y herramientas de análisis de datos. Trabajo con HTML5, CSS3, JavaScript y tecnologías modernas del desarrollo web, con un enfoque constante en aprendizaje continuo y mejora de habilidades.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Mis Habilidades</h2>
-            <p class="section-subtitle">Tecnologías y herramientas con las que trabajo</p>
-            
-            <div class="skills-container">
-                <!-- Frontend -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="category-icon">🎨</span>
-                        Frontend Development
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-skill="html">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML5</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="css">
-                            <div class="skill-info">
-                                <span class="skill-name">CSS3 & SASS</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="javascript">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript ES6+</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="react">
-                            <div class="skill-info">
-                                <span class="skill-name">React</span>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="responsive">
-                            <div class="skill-info">
-                                <span class="skill-name">Responsive Design</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- ENCABEZADO/HERO -->
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 id="hero-title">¡Hola! Soy Jose Luis Diaz</h1>
+                        <p class="subtitle">Desarrollador Web Full Stack apasionado por crear soluciones digitales innovadoras y funcionales</p>
+                        <a href="#contacto" class="cta-button" aria-label="Ir a la sección de contacto">Hablemos</a>
                     </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="category-icon">⚙️</span>
-                        Backend Development
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-skill="nodejs">
-                            <div class="skill-info">
-                                <span class="skill-name">Node.js & Express</span>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="python">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-percentage">70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="php">
-                            <div class="skill-info">
-                                <span class="skill-name">PHP</span>
-                                <span class="skill-percentage">65%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="65"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="sql">
-                            <div class="skill-info">
-                                <span class="skill-name">SQL & Databases</span>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="api">
-                            <div class="skill-info">
-                                <span class="skill-name">REST APIs</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools & Others -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="category-icon">🛠️</span>
-                        Herramientas & Otros
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-skill="git">
-                            <div class="skill-info">
-                                <span class="skill-name">Git & GitHub</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="figma">
-                            <div class="skill-info">
-                                <span class="skill-name">Figma & Design</span>
-                                <span class="skill-percentage">70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="firebase">
-                            <div class="skill-info">
-                                <span class="skill-name">Firebase</span>
-                                <span class="skill-percentage">65%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="65"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="aws">
-                            <div class="skill-info">
-                                <span class="skill-name">AWS Basics</span>
-                                <span class="skill-percentage">60%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="60"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item" data-skill="agile">
-                            <div class="skill-info">
-                                <span class="skill-name">Agile & Scrum</span>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
+                    <div class="hero-image">
+                        <img src="images/perfil.jpg" alt="Jose Luis Diaz, Desarrollador Web Full Stack sonriendo" class="profile-img" width="400" height="400" loading="eager">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CERTIFICACIONES -->
-    <section id="certificaciones" class="certifications">
-        <div class="container">
-            <h2>Certificaciones y Cursos</h2>
-            <p class="section-intro">Comprometido con el aprendizaje continuo y la mejora profesional</p>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">📊</div>
-                    <h3>Analista de Datos</h3>
-                    <p>EBAC - Escuela Británica de Artes Creativas</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🐍</div>
-                    <h3>Curso Python</h3>
-                    <p>Programación en Python</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">📈</div>
-                    <h3>Excel Avanzado</h3>
-                    <p>Análisis de datos con Excel</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔬</div>
-                    <h3>Introducción a la Ciencia de Datos</h3>
-                    <p>Fundamentos de Data Science</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔒</div>
-                    <h3>Ciberseguridad</h3>
-                    <p>CISCO - Fundamentos de Ciberseguridad</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🤖</div>
-                    <h3>Inteligencia Artificial y Productividad</h3>
-                    <p>Google - IA aplicada</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">☁️</div>
-                    <h3>Fundamentos de AWS</h3>
-                    <p>Workshop AWS para Proyectos ETL</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🎓</div>
-                    <h3>Fundamentos de la Investigación</h3>
-                    <p>Metodología de investigación</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">💡</div>
-                    <h3>Pensamiento Crítico</h3>
-                    <p>Resolución de problemas</p>
+        <!-- ESTADÍSTICAS -->
+        <section class="stats" aria-label="Estadísticas profesionales">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" aria-label="15 proyectos completados">15+</div>
+                        <div class="stat-label">Proyectos Completados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" aria-label="3 años de experiencia">3+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" aria-label="10 certificaciones">10+</div>
+                        <div class="stat-label">Certificaciones</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" aria-label="100 por ciento de dedicación">100%</div>
+                        <div class="stat-label">Dedicación</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="projects">
-        <div class="container">
-            <h2>Proyectos destacados</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Casa Lool Beh - Sistema de Reservas</h3>
-                        <span class="year">2024</span>
-                    </div>
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title">Sobre mí</h2>
+                <div class="about-content">
                     <p>
-                        Sistema completo de reservas para casa de hospedaje que permite a los usuarios hacer reservas en línea,
-                        gestionar disponibilidad y realizar seguimiento de reservas. Incluye validación de datos en tiempo real,
-                        interfaz intuitiva y panel administrativo para gestión de reservas.
+                        Soy un desarrollador web apasionado por crear soluciones innovadoras y funcionales. Me especializo en el desarrollo de aplicaciones web modernas utilizando las últimas tecnologías y mejores prácticas del desarrollo web.
                     </p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Joludime/Casa-Lool-Beh" target="_blank" rel="noopener" class="project-link">
-                            💻 GitHub
-                        </a>
-                        <a href="https://joludime.github.io/Casa-Lool-Beh/" target="_blank" rel="noopener" class="project-link">
-                            🌐 Ver Demo
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Sistema de Reservas Hotel</h3>
-                        <span class="year">2024</span>
-                    </div>
                     <p>
-                        Aplicación web profesional para gestión integral de reservas hoteleras con interfaz moderna e intuitiva.
-                        Permite filtrar habitaciones, gestionar disponibilidad, calcular precios y generar reportes detallados.
-                        Optimizado para rendimiento y experiencia de usuario excepcional.
+                        Con experiencia tanto en frontend como backend, me encanta transformar ideas en realidad digital, siempre buscando la mejor experiencia de usuario, código limpio y soluciones escalables que resuelvan problemas reales.
                     </p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">LocalStorage</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Joludime/sistema-reservas-hotel" target="_blank" rel="noopener" class="project-link">
-                            💻 GitHub
-                        </a>
-                        <a href="https://joludime.github.io/sistema-reservas-hotel/" target="_blank" rel="noopener" class="project-link">
-                            🌐 Ver Demo
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Análisis de Reservas</h3>
-                        <span class="year">2024</span>
-                    </div>
                     <p>
-                        Herramienta avanzada de análisis y visualización de datos de reservas con gráficos interactivos.
-                        Procesa información histórica, genera estadísticas detalladas y ofrece insights valiosos para
-                        la toma de decisiones. Incluye exportación de reportes y dashboard dinámico.
+                        Mi trayectoria incluye múltiples proyectos completados, destacando sistemas de reservas, aplicaciones de gestión y herramientas de análisis de datos. Trabajo con HTML5, CSS3, JavaScript y tecnologías modernas del desarrollo web, con un enfoque constante en aprendizaje continuo y mejora de habilidades.
                     </p>
-                    <div class="project-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Charts.js</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Joludime/ANALISIS_RESERVAS" target="_blank" rel="noopener" class="project-link">
-                            💻 GitHub
-                        </a>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2>¿Hablamos?</h2>
-            <p class="contact-intro">
-                Estoy disponible para nuevos proyectos, colaboraciones y oportunidades interesantes. 
-                No dudes en contactarme a través de cualquiera de estos canales.
-            </p>
-            <div class="contact-methods">
-                <a href="mailto:joludime291076@gmail.com" class="contact-link">
-                    <span class="icon">✉️</span>
-                    joludime291076@gmail.com
-                </a>
-                <a href="https://github.com/Joludime" target="_blank" rel="noopener" class="contact-link">
-                    <span class="icon">💻</span>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/jose-luis-diaz-morujo" target="_blank" rel="noopener" class="contact-link">
-                    <span class="icon">🔗</span>
-                    LinkedIn
-                </a>
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="skills-section" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" class="section-title">Mis Habilidades</h2>
+                <p class="section-subtitle">Tecnologías y herramientas con las que trabajo</p>
+                
+                <div class="skills-container">
+                    <!-- Frontend -->
+                    <article class="skill-category">
+                        <h3 class="category-title">
+                            <span class="category-icon" aria-hidden="true">🎨</span>
+                            Frontend Development
+                        </h3>
+                        <div class="skills-list">
+                            <div class="skill-item" data-skill="html">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-percentage" aria-label="90 porciento de dominio">90%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 skill level">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="css">
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3 & SASS</span>
+                                    <span class="skill-percentage" aria-label="85 porciento de dominio">85%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 skill level">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="javascript">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript ES6+</span>
+                                    <span class="skill-percentage" aria-label="80 porciento de dominio">80%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript skill level">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="react">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percentage" aria-label="75 porciento de dominio">75%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="React skill level">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="responsive">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-percentage" aria-label="90 porciento de dominio">90%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design skill level">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Backend -->
+                    <article class="skill-category">
+                        <h3 class="category-title">
+                            <span class="category-icon" aria-hidden="true">⚙️</span>
+                            Backend Development
+                        </h3>
+                        <div class="skills-list">
+                            <div class="skill-item" data-skill="nodejs">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js & Express</span>
+                                    <span class="skill-percentage" aria-label="75 porciento de dominio">75%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Node.js skill level">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="python">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage" aria-label="70 porciento de dominio">70%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Python skill level">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="php">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percentage" aria-label="65 porciento de dominio">65%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="PHP skill level">
+                                    <div class="skill-progress" data-progress="65"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="sql">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL & Databases</span>
+                                    <span class="skill-percentage" aria-label="75 porciento de dominio">75%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="SQL skill level">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="api">
+                                <div class="skill-info">
+                                    <span class="skill-name">REST APIs</span>
+                                    <span class="skill-percentage" aria-label="80 porciento de dominio">80%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="REST APIs skill level">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tools & Others -->
+                    <article class="skill-category">
+                        <h3 class="category-title">
+                            <span class="category-icon" aria-hidden="true">🛠️</span>
+                            Herramientas & Otros
+                        </h3>
+                        <div class="skills-list">
+                            <div class="skill-item" data-skill="git">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git & GitHub</span>
+                                    <span class="skill-percentage" aria-label="85 porciento de dominio">85%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Git skill level">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="figma">
+                                <div class="skill-info">
+                                    <span class="skill-name">Figma & Design</span>
+                                    <span class="skill-percentage" aria-label="70 porciento de dominio">70%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Figma skill level">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="firebase">
+                                <div class="skill-info">
+                                    <span class="skill-name">Firebase</span>
+                                    <span class="skill-percentage" aria-label="65 porciento de dominio">65%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Firebase skill level">
+                                    <div class="skill-progress" data-progress="65"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="aws">
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS Basics</span>
+                                    <span class="skill-percentage" aria-label="60 porciento de dominio">60%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="AWS skill level">
+                                    <div class="skill-progress" data-progress="60"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item" data-skill="agile">
+                                <div class="skill-info">
+                                    <span class="skill-name">Agile & Scrum</span>
+                                    <span class="skill-percentage" aria-label="75 porciento de dominio">75%</span>
+                                </div>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Agile skill level">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-            
-            <!-- Formulario de Contacto -->
-            <form id="formulario-contacto" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </section>
+
+        <!-- CERTIFICACIONES -->
+        <section id="certificaciones" class="certifications" aria-labelledby="cert-title">
+            <div class="container">
+                <h2 id="cert-title">Certificaciones y Cursos</h2>
+                <p class="section-intro">Comprometido con el aprendizaje continuo y la mejora profesional</p>
+                <div class="certifications-grid">
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">📊</div>
+                        <h3>Analista de Datos</h3>
+                        <p>EBAC - Escuela Británica de Artes Creativas</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">🐍</div>
+                        <h3>Curso Python</h3>
+                        <p>Programación en Python</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">📈</div>
+                        <h3>Excel Avanzado</h3>
+                        <p>Análisis de datos con Excel</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">🔬</div>
+                        <h3>Introducción a la Ciencia de Datos</h3>
+                        <p>Fundamentos de Data Science</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">🔒</div>
+                        <h3>Ciberseguridad</h3>
+                        <p>CISCO - Fundamentos de Ciberseguridad</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">🤖</div>
+                        <h3>Inteligencia Artificial y Productividad</h3>
+                        <p>Google - IA aplicada</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">☁️</div>
+                        <h3>Fundamentos de AWS</h3>
+                        <p>Workshop AWS para Proyectos ETL</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">🎓</div>
+                        <h3>Fundamentos de la Investigación</h3>
+                        <p>Metodología de investigación</p>
+                    </article>
+                    <article class="cert-card">
+                        <div class="cert-icon" aria-hidden="true">💡</div>
+                        <h3>Pensamiento Crítico</h3>
+                        <p>Resolución de problemas</p>
+                    </article>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title">Proyectos destacados</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Casa Lool Beh - Sistema de Reservas</h3>
+                            <span class="year">2024</span>
+                        </div>
+                        <p>
+                            Sistema completo de reservas para casa de hospedaje que permite a los usuarios hacer reservas en línea,
+                            gestionar disponibilidad y realizar seguimiento de reservas. Incluye validación de datos en tiempo real,
+                            interfaz intuitiva y panel administrativo para gestión de reservas.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Joludime/Casa-Lool-Beh" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver código en GitHub de Casa Lool Beh">
+                                💻 GitHub
+                            </a>
+                            <a href="https://joludime.github.io/Casa-Lool-Beh/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver demo en vivo de Casa Lool Beh">
+                                🌐 Ver Demo
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Sistema de Reservas Hotel</h3>
+                            <span class="year">2024</span>
+                        </div>
+                        <p>
+                            Aplicación web profesional para gestión integral de reservas hoteleras con interfaz moderna e intuitiva.
+                            Permite filtrar habitaciones, gestionar disponibilidad, calcular precios y generar reportes detallados.
+                            Optimizado para rendimiento y experiencia de usuario excepcional.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">LocalStorage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Joludime/sistema-reservas-hotel" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver código en GitHub del Sistema de Reservas Hotel">
+                                💻 GitHub
+                            </a>
+                            <a href="https://joludime.github.io/sistema-reservas-hotel/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver demo en vivo del Sistema de Reservas Hotel">
+                                🌐 Ver Demo
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Análisis de Reservas</h3>
+                            <span class="year">2024</span>
+                        </div>
+                        <p>
+                            Herramienta avanzada de análisis y visualización de datos de reservas con gráficos interactivos.
+                            Procesa información histórica, genera estadísticas detalladas y ofrece insights valiosos para
+                            la toma de decisiones. Incluye exportación de reportes y dashboard dinámico.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Charts.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Joludime/ANALISIS_RESERVAS" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Ver código en GitHub de Análisis de Reservas">
+                                💻 GitHub
+                            </a>
+                        </div>
+                    </article>
                 </div>
-                <div class="form-group">
-                    <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">¿Hablamos?</h2>
+                <p class="contact-intro">
+                    Estoy disponible para nuevos proyectos, colaboraciones y oportunidades interesantes. 
+                    No dudes en contactarme a través de cualquiera de estos canales.
+                </p>
+                <div class="contact-methods" role="list">
+                    <a href="mailto:joludime291076@gmail.com" class="contact-link" role="listitem" aria-label="Enviar email a joludime291076@gmail.com">
+                        <span class="icon" aria-hidden="true">✉️</span>
+                        joludime291076@gmail.com
+                    </a>
+                    <a href="https://github.com/Joludime" target="_blank" rel="noopener noreferrer" class="contact-link" role="listitem" aria-label="Visitar perfil de GitHub">
+                        <span class="icon" aria-hidden="true">💻</span>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/jose-luis-diaz-morujo" target="_blank" rel="noopener noreferrer" class="contact-link" role="listitem" aria-label="Visitar perfil de LinkedIn">
+                        <span class="icon" aria-hidden="true">🔗</span>
+                        LinkedIn
+                    </a>
                 </div>
-                <div class="form-group">
-                    <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Enviar mensaje</button>
-            </form>
-        </div>
-    </section>
+                
+                <!-- Formulario de Contacto -->
+                <form id="formulario-contacto" class="contact-form" aria-label="Formulario de contacto">
+                    <div class="form-group">
+                        <label for="nombre" class="sr-only">Tu nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Tu email</label>
+                        <input type="email" id="email" name="email" placeholder="Tu email" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto" class="sr-only">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje" class="sr-only">Tu mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button" aria-label="Enviar formulario de contacto">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Jose Luis Diaz. Desarrollador Web Full Stack. Todos los derechos reservados.</p>
-            <div class="footer-links">
-                <a href="https://github.com/Joludime" target="_blank" rel="noopener">GitHub</a>
-                <a href="mailto:joludime291076@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/jose-luis-diaz-morujo" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
+            <nav class="footer-links" aria-label="Enlaces del pie de página">
+                <a href="https://github.com/Joludime" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="mailto:joludime291076@gmail.com" aria-label="Email">Email</a>
+                <a href="https://www.linkedin.com/in/jose-luis-diaz-morujo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            </nav>
         </div>
     </footer>
 
