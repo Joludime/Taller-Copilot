@@ -15,13 +15,13 @@
   "sobreMi": {
     "parrafo1": "Soy un desarrollador web apasionado por crear soluciones innovadoras y funcionales. Me especializo en el desarrollo de aplicaciones web modernas utilizando las últimas tecnologías y mejores prácticas del desarrollo web.",
     "parrafo2": "Con experiencia tanto en frontend como backend, me encanta transformar ideas en realidad digital, siempre buscando la mejor experiencia de usuario, código limpio y soluciones escalables que resuelvan problemas reales.",
-    "parrafo3": "Mi trayectoria incluye múltiples proyectos completados, destacando sistemas de reservas, aplicaciones de gestión y herramientas de análisis de datos. Trabajo con HTML5, CSS3, JavaScript y tecnologías modernas del desarrollo web, con un enfoque constante en aprendizaje continuo y mejora de habilidades."
+    "parrafo3": "Mi trayectoria incluye múltiples proyectos completados, destacando sistemas de reservas, aplicaciones de gestión, herramientas de análisis de datos y servidores MCP para automatización con IA. Trabajo con HTML5, CSS3, JavaScript, Node.js y tecnologías modernas del desarrollo web, con un enfoque constante en aprendizaje continuo y mejora de habilidades."
   },
   "estadisticas": {
-    "proyectos": "15+",
+    "proyectos": "20+",
     "años_experiencia": "3+",
     "dedicacion": "100%",
-    "tecnologias": "10+"
+    "tecnologias": "15+"
   },
   "habilidades": {
     "frontend": [
@@ -38,7 +38,8 @@
       "Bases de Datos SQL",
       "Python",
       "PHP",
-      "Autenticación & Seguridad"
+      "Autenticación & Seguridad",
+      "MCP Servers"
     ],
     "herramientas": [
       "Git & GitHub",
@@ -46,12 +47,24 @@
       "Figma",
       "Postman",
       "Firebase",
-      "Netlify & Vercel"
+      "Netlify & Vercel",
+      "GitHub Actions",
+      "TypeScript"
     ]
   },
   "proyectos": [
     {
       "id": 1,
+      "nombre": "MCP-MAIL - Servidor de Email para IA",
+      "descripcion": "Servidor MCP Open Source que permite a Claude AI enviar correos electrónicos automáticamente desde múltiples cuentas de Gmail. Incluye configuración segura con variables de entorno, integración directa con Claude Desktop, documentación completa y CI/CD automatizado. Release v1.0.0 oficial disponible.",
+      "año": 2025,
+      "tecnologias": ["Node.js", "TypeScript", "MCP", "Nodemailer", "GitHub Actions"],
+      "github": "https://github.com/Joludime/MCP-MAIL",
+      "demo": "https://github.com/Joludime/MCP-MAIL/releases/tag/v1.0.0",
+      "destacado": true
+    },
+    {
+      "id": 2,
       "nombre": "Casa Lool Beh - Sistema de Reservas",
       "descripcion": "Sistema completo de reservas para casa de hospedaje que permite a los usuarios hacer reservas en línea, gestionar disponibilidad y realizar seguimiento de reservas. Incluye validación de datos en tiempo real, interfaz intuitiva y panel administrativo.",
       "año": 2024,
@@ -61,7 +74,7 @@
       "destacado": true
     },
     {
-      "id": 2,
+      "id": 3,
       "nombre": "Sistema de Reservas Hotel",
       "descripcion": "Aplicación web profesional para gestión integral de reservas hoteleras con interfaz moderna e intuitiva. Permite filtrar habitaciones, gestionar disponibilidad, calcular precios y generar reportes detallados. Optimizado para rendimiento y UX.",
       "año": 2024,
@@ -71,7 +84,7 @@
       "destacado": true
     },
     {
-      "id": 3,
+      "id": 4,
       "nombre": "Análisis de Reservas",
       "descripcion": "Herramienta avanzada de análisis y visualización de datos de reservas con gráficos interactivos. Procesa información histórica, genera estadísticas detalladas y ofrece insights valiosos para la toma de decisiones. Dashboard dinámico.",
       "año": 2024,
@@ -94,13 +107,14 @@
     "portafolioAntiguo": "https://joludime.github.io/PortafolioWeb/",
     "portafolioNuevo": "https://joludime.github.io/Taller-Copilot/",
     "githubPages": "https://joludime.github.io/",
-    "perfilGithub": "https://github.com/Joludime"
+    "perfilGithub": "https://github.com/Joludime",
+    "mcpMail": "https://github.com/Joludime/MCP-MAIL"
   },
   "metadatos": {
-    "version": "2.0",
-    "actualizado": "2025-11-11",
+    "version": "2.1",
+    "actualizado": "2025-11-14",
     "autor": "Jose Luis Diaz",
     "licencia": "MIT",
-    "descripcion": "Portafolio profesional mejorado con diseño moderno y responsive"
+    "descripcion": "Portafolio profesional mejorado con diseño moderno y responsive, incluyendo proyectos de automatización con IA"
   }
 }
